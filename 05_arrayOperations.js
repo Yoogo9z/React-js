@@ -39,6 +39,7 @@ console.log(filterNameStartByA);
   */
 const tableau3 = [5, 21, 9, 7, 48];
 const sum = tableau3.reduce((accumulator, currentValue) => accumulator + currentValue);
+console.log('le résultat est ' + sum);
 
 /**
  * Utiliser la fonction .find sur le tableau passé en paramètre
@@ -59,7 +60,9 @@ const sum = tableau3.reduce((accumulator, currentValue) => accumulator + current
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const findUserById = (array, id) => { }
+const tableau4 = [{ id: 1, name: 'John' }, { id: 2, name: 'Doe' }, { id: 3, name: 'Foo' }, { id: 4, name: 'Bar' },];
+const findUserById = tableau4.find((x) => x.id === 3);
+console.log(findUserById);
 
 
 module.exports = { multiplyByTwo, filterNameStartByA, sum, findUserById };
