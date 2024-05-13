@@ -7,7 +7,7 @@
  *   - le mot clée "function" est interdis
  */
 
-let arrow1 = (a) => {return a+1};
+let arrow1 = a => {return a+1};
 console.log(arrow1(3));
 
 /**
@@ -19,7 +19,7 @@ console.log(arrow1(3));
  *   - le mot clée "return" est interdis
  */
 
-let arrow2 = (b) => b+1;
+let arrow2 = b => b+1;
 let resultat = arrow2(8);
 console.log(resultat);
 
