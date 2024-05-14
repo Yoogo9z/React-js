@@ -24,7 +24,7 @@ console.log(concat(arr1, arr2));
  * - ne pas utiliser la méthode push
  */
 const arr3 = [1, 2, 3];
-const push = (arr3) => { return[...arr3,4]};
+const push = (arr3) => { return [...arr3, 4] };
 console.log(push(arr3));
 
 /**
@@ -33,15 +33,15 @@ console.log(push(arr3));
  * ex: {a: 1, b: 2}, {c: 3, d: 4} => {a: 1, b: 2, c: 3, d: 4}
  */
 let obj1 = {
-    a : 1,
-    b : 2
+    a: 1,
+    b: 2
 };
 let obj2 = {
-    c : 3,
-    d : 4
+    c: 3,
+    d: 4
 };
-const merge = (obj1, obj2) => { return{...obj1,...obj2}};
-console.log(merge(obj1,obj2));
+const merge = (obj1, obj2) => { return { ...obj1, ...obj2 } };
+console.log(merge(obj1, obj2));
 
 /**
  * utiliser l'opérateur de composition ... afin de modifier la propriété name de l'objet
@@ -52,7 +52,16 @@ console.log(merge(obj1,obj2));
  *  - interdiction d'utiliser l'opérateur d'affectation "="
  */
 
-const setName = (obj, name) => { }
+let obj3 = {
+    name: 'toto'
+};
+let change = 'titi';
+
+const setName = (obj, nouveauNom) => ({ ...obj, name: nouveauNom });
+
+obj3 = setName(obj3, change);
+
+console.log(obj3);
 
 // astuce: {...obj} crée une copie de l'objet, c'est un des principes de l'immutabilité et évite les problèmes de référence
 module.exports = { concat, push, merge, setName }
