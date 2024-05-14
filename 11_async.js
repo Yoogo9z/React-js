@@ -70,7 +70,6 @@ const apiResponse = async (url) => {
 
 // Définition de l'URL de l'API à appeler
 const url = 'https://jsonplaceholder.typicode.com/todos/1';
-
 // Appel de la fonction apiResponse avec l'URL en paramètre
 // Utilisation de la méthode then pour attendre que la Promesse soit résolue et afficher le résultat dans la console
 apiResponse(url).then(result => {
