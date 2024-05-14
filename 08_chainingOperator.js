@@ -5,7 +5,7 @@
  * renvoi undefined si l'utilisateur n'a pas de groupe
  * 
  * exemple : 
- * {
+ * { 
  *  name: "John",
  *    group: {
  *      name: "admin"
@@ -16,6 +16,15 @@
  * 
  */
 
-const getGroupName = (obj) => {}
+obj = {
+    name: "John",
+    group: { name: "admin" }
+}
 
-module.exports = {getGroupName};
+const getGroupName = (arg1) => {
+    return obj?.group;
+}
+console.log(getGroupName(obj));
+
+
+module.exports = { getGroupName };
