@@ -13,14 +13,19 @@
  */
 
 
-const { sleep } = require('./10_promise');
+const { sleep } = require('./10_promise.js');
 
-sleep().then(() => {
+const waitAndExecute = (callback) => {
+    sleep().then(() => {
+        callback();
+    });
+};
+
+waitAndExecute(() => {
     console.log('La pause de 2 secondes est terminée !');
 });
 
-const usingThen = (cb) => {
-}
+
 
 /**
  * Créez une fonction asynchrone qui attend 2 seconde puis execute le callback passé en paramètre

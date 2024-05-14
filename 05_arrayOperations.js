@@ -39,7 +39,7 @@ console.log(filterNameStartByA);
   */
 const tableau3 = [5, 21, 9, 7, 48];
 const sum = tableau3.reduce((accumulator, currentValue) => accumulator + currentValue);
-console.log('le résultat est ' + sum);
+console.log(sum);
 
 /**
  * Utiliser la fonction .find sur le tableau passé en paramètre
