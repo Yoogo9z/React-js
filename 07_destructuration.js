@@ -48,9 +48,11 @@ const tab3 = {
     name: "toto",
     age: 42
 }
-const extractName = () => { 
-    return 
-}
+
+const extractName = ({name}) => { 
+    return name;
+};
+console.log(extractName(tab3));
 
 /**
  * utilisez la décomposition pour retourner l'objet utilisateur sans le champ "password"
@@ -63,6 +65,17 @@ const extractName = () => {
  * 
  */
 
-const removePassword = () => { };
+const compte = {
+    name: "toto",
+    password: "1234"
+};
+
+const {password, ...restObj} = compte;
+
+const removePassword = (compte) => { 
+    return restObj;
+};
+
+console.log(removePassword(compte));
 
 module.exports = { extractFirstTwo, extractRest, extractName, removePassword }
