@@ -11,6 +11,14 @@
  *    - ne pas utiliser async await
  * 
  */
+
+
+const { sleep } = require('./10_promise');
+
+sleep().then(() => {
+    console.log('La pause de 2 secondes est terminée !');
+});
+
 const usingThen = (cb) => {
 }
 

@@ -23,4 +23,4 @@ let arrow2 = b => b+1;
 let resultat = arrow2(8);
 console.log(resultat);
 
-// module.exports = {arrow1, arrow2};
+module.exports = {arrow1, arrow2};
