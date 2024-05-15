@@ -13,9 +13,7 @@
  */
 
 tab1 = [1, 2, 3]
-const extractFirstTwo = ([first, Second, ...Restarray]) => {
-    return [first, Second];
-};
+const extractFirstTwo = ([first, Second]) => [first, Second];
 
 console.log(extractFirstTwo(tab1));
 
@@ -27,9 +25,8 @@ console.log(extractFirstTwo(tab1));
 */
 
 tab2 = [1, 2, 3]
-const extractRest = ([first, ...Restarray]) => {
-    return [...Restarray];
-}
+// utiliser first a la place de _ fonctionne egalement, mais c'est pas une bonne pratique
+const extractRest = ([_, ...Restarray]) =>[...Restarray]; 
 console.log(extractRest(tab2));
 
 /**
@@ -49,9 +46,7 @@ const tab3 = {
     age: 42
 }
 
-const extractName = ({name}) => { 
-    return name;
-};
+const extractName = ({name}) => name;
 console.log(extractName(tab3));
 
 /**
@@ -72,9 +67,7 @@ const compte = {
 
 const {password, ...restObj} = compte;
 
-const removePassword = (compte) => { 
-    return restObj;
-};
+const removePassword = (compte) => restObj;
 
 console.log(removePassword(compte));
 

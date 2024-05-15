@@ -12,9 +12,7 @@
 
 function ternaryChain(a, b) {
     return a > b ? ">" :
-    a < b ? "<" :
-    a === b ? "=" :
-    null ;
+        a < b ? "<" : "=";
 }
 
 console.log(ternaryChain(6, 2));

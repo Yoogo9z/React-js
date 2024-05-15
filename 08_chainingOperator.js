@@ -16,15 +16,13 @@
  * 
  */
 
-obj = {
+obj1 = {
     name: "John",
     group: { name: "admin" }
 }
 
-const getGroupName = (arg1) => {
-    return obj?.group;
-}
-console.log(getGroupName(obj));
+const getGroupName = (obj) => obj?.group.name;
+console.log(getGroupName(obj1));
 
 
 module.exports = { getGroupName };
